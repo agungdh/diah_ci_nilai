@@ -34,7 +34,7 @@ class M_hasil extends CI_Model{
     }
 
     function viewlagi($nis,$semester) {
-       $sql = " SELECT * FROM  hasil_belajar where nis=? and semester=?";
+       $sql = " SELECT * FROM  hasil_belajar where nis=? and semester=? LIMIT 1";
 		$query = $this->db->query($sql,array($nis,$semester));
 		$row = $query->result();
 
